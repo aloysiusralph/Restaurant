@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/search_screen"
+    android:id="@+id/restaurant">
+
+        <fragment
+            android:id="@+id/search_screen"
+            android:name="com.poc.myapplication.view.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search">
+            <action
+                android:id="@+id/action_search_to_details"
+                app:destination="@id/details_screen"
+                />
+        </fragment>
+        <fragment
+            android:id="@+id/details_screen"
+            android:name="com.poc.myapplication.view.DetailFragment"
+            android:label="fragment_detail"
+            tools:layout="@layout/fragment_detail"/>
+
+</navigation>
